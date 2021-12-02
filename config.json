@@ -1,4 +1,9 @@
 {
+	"enabled" : true,
+	"trigger" : {
+		"hour" : 0,
+		"minute" : 15
+	},
 	"ssc_api" : "https://api.hive-engine.com/rpc",
 	"json_id" : "ssc-mainnet-hive",
 	"staker_count" : 200,
