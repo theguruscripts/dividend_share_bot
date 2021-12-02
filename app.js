@@ -1,19 +1,12 @@
 const { Hive } = require('@splinterlands/hive-interface');
-const axios = require('axios');
-const fs = require('fs');
 const colors = require('colors');
-const util = require('util');
 const config = require('./config.json');
 const { MongoClient } = require('mongodb');
 const { HiveEngine } = require('@splinterlands/hive-interface');
 let hive_engine = new HiveEngine();
 const schedule = require('node-schedule');
-const { upperCase, localeUpperCase } = require('upper-case');
+const { upperCase } = require('upper-case');
 
-const hiveio = require("@hiveio/hive-js");
-hiveio.api.setOptions({url: "https://api.hive.blog"});
-hiveio.config.set('alternative_api_endpoints', config.rpc_nodes);
- 
 const sscjs = require('sscjs');
 var sscString = config.ssc_api;
 var ssc = new sscjs(sscString);
