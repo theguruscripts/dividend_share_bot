@@ -11,6 +11,11 @@ npm install --save
 ## Configuration
 ```javascript
 {
+	"enabled" : true,					    //Set true to initiate dividend share process	
+	"trigger" : {						    //Set UTC Time to initiate the process (Default 00:15am)		
+		"hour" : 0,
+		"minute" : 15
+	},	
 	"ssc_api" : "https://api.hive-engine.com/rpc",              //Hive-Engine Api Call
 	"json_id" : "ssc-mainnet-hive",                             //Hive-Engine Json Id
 	"staker_count" : 200,                                       //Number of stakers of the token
