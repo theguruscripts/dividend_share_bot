@@ -998,5 +998,13 @@ const getTokenBalance = async(TOKENSYMBOL) => {
 	}
 };
 
-processStake();
-deleteTransDb();
+// trigger at utc time
+const ruleStaking = {
+	...config.trigger,
+	tz: 'Etc/UTC',
+};
+if(config.enabled == true)
+{
+	schedule.scheduleJob(ruleStaking, deleteTransDb);
+	schedule.scheduleJob(ruleStaking, processStake);
+}
