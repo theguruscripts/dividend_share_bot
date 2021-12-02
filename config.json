@@ -1,0 +1,59 @@
+{
+	"ssc_api" : "https://api.hive-engine.com/rpc",
+	"json_id" : "ssc-mainnet-hive",
+	"staker_count" : 200,
+	"decimal" : 1000,
+	"timeout" : 5000,
+	"rec_timeout" : 1000,
+	"he_timeout" : 9000,
+	"block_timeout" : 9000,	
+	"contract_setting" : {
+		"token" : "PIMP",
+		"contract" : "tokens",		
+		"table" : "balances",
+		"limit" : 1000
+	},
+	"reward_pools_setting" : {
+		"pools" : [
+			["", "balTrue", "100", "", "mintTrue", "availTrue", "", ""],
+			["", "balFalse", "100", "12", "mintFalse", "availFalse", "", ""]
+		],
+		"mint_setting" : {			
+			"contract" : "tokens",
+			"action" : "issue",
+			"event" : "transferFromContract",				
+			"mint_memo" : "Mint {{tokensymbol}} Tokens To Reward Pool Share - ({{date}} / {{time}} Server Time)"
+		},
+		"reward_setting" : {
+			"distributor_account" : "",
+			"distributor_activekey" : "",
+			"contract" : "tokens",
+			"action" : "transfer",
+			"event" : "transfer",
+			"reward_memo" : "Congratulations, Your Rank {{stakerrank}} & You Earned {{stakerreward}} {{tokensymbol}} For Staking {{staketokensymbol}}"
+		},
+		"balance_setting" : {
+			"contract" : "tokens",
+			"table" : "balances"
+		}
+	},
+	"db_string" : "",
+	"db_name" : "pooldb",
+	"db_table_name" : "pooltb",
+	"db_remove_days" : 7,
+	"rpc_nodes" : [
+		"https://api.deathwing.me",
+		"https://hive.roelandp.nl",
+		"https://api.openhive.network",
+		"https://rpc.ausbit.dev",
+		"https://hived.emre.sh",
+		"https://hive-api.arcange.eu",
+		"https://api.hive.blog",
+		"https://api.c0ff33a.uk",
+		"https://rpc.ecency.com",
+		"https://anyx.io",
+		"https://techcoderx.com",
+		"https://hived.privex.io",
+		"https://api.followbtcnews.com/"
+	]
+}
