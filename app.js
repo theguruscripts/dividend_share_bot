@@ -23,12 +23,12 @@ const hive = new Hive({
   rpc_nodes: config.rpc_nodes
 });
 
-const TANTOKENSYMBOL = config.contract_setting.token;
-const TANCONTRACT = config.contract_setting.contract;
-const TANTABLE = config.contract_setting.table;
+const STAKETOKENSYMBOL = config.contract_setting.token;
+const STAKECONTRACT = config.contract_setting.contract;
+const STAKETABLE = config.contract_setting.table;
 
-var TANLIMIT = config.contract_setting.limit;
-TANLIMIT = parseInt(TANLIMIT) || 0;
+var STAKELIMIT = config.contract_setting.limit;
+STAKELIMIT = parseInt(STAKELIMIT) || 0;
 var STAKERCOUNT = config.staker_count;
 STAKERCOUNT = parseInt(STAKERCOUNT) || 0;
 var DECIMAL = config.decimal;
@@ -499,7 +499,7 @@ const processTokenBalance = async() => {
 		{
 			try
 			{
-				let result = await ssc.find(TANCONTRACT, TANTABLE, { symbol: TANTOKENSYMBOL }, TANLIMIT, n, []);
+				let result = await ssc.find(STAKECONTRACT, STAKETABLE, { symbol: STAKETOKENSYMBOL }, STAKELIMIT, n, []);
 				
 				if(result.length > 0)
 				{
@@ -782,7 +782,7 @@ const transPoolShare = async(rewardData, TOKENSYMBOL) => {
 			var stakeMemo = memoTemp.replace('{{stakerrank}}', stakeRank)
 			.replace('{{stakerreward}}', stakerReward)
 			.replace('{{tokensymbol}}', TOKENSYMBOL)
-			.replace('{{staketokensymbol}}', TANTOKENSYMBOL);
+			.replace('{{staketokensymbol}}', STAKETOKENSYMBOL);
 			stakeMemo = stakeMemo.toString();
 			
 			var stakerName = rewardData[i].account;
