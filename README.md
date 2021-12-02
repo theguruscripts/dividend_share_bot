@@ -1,5 +1,5 @@
-# dividend_share
-This script can be used to share dividend for STAKING your token like BROFund, TANGENT & etc.
+# dividend_share_bot
+This script can be used to share dividend for STAKING your token like BROFund, TANGENT & etc in Hive-Engine.
 
 ***
 ## Installation
@@ -87,6 +87,6 @@ node app.js
 ```
 ***
 ## Development
-Encounter any issue or Bugs, Please report them [Here](https://github.com/theguruscripts/dividend_share/issues).
+Encounter any issue or Bugs, Please report them [Here](https://github.com/theguruscripts/dividend_share_bot/issues).
 
 The Script Developed by @theguruasia on HIVE.BLOG, @TheGuruAsia theguruasia#8947 on Discord.
