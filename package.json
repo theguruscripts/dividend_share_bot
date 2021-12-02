@@ -1,5 +1,5 @@
 {
-  "name": "dividend_share",
+  "name": "dividend_share_bot",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/theguruscripts/dividend_share.git"
+    "url": "git+https://github.com/theguruscripts/dividend_share_bot.git"
   },
   "author": "TheGuruAsia",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/theguruscripts/dividend_share/issues"
+    "url": "https://github.com/theguruscripts/dividend_share_bot/issues"
   },
-  "homepage": "https://github.com/theguruscripts/dividend_share#readme",
+  "homepage": "https://github.com/theguruscripts/dividend_share_bot#readme",
   "dependencies": {
     "@hiveio/hive-js": "^2.0.4",
     "@splinterlands/hive-interface": "^2.2.7",
